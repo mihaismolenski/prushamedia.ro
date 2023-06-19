@@ -1,15 +1,21 @@
-import logo from "./logo.svg";
-import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-function App() {
+import "./app.scss";
+import { Footer, Header } from "./components";
+import { Home } from "./features";
+
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Coming soon...</p>
-      </header>
+    <div className="app">
+      <Header />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;

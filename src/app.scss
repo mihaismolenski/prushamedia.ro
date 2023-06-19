@@ -1,0 +1,9 @@
+@import "./scss/variables.scss";
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: $dark-grey;
+  color: $white;
+}

@@ -1,0 +1,8 @@
+@import "../../scss/variables.scss";
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $white;
+}

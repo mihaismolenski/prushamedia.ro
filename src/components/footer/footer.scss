@@ -1,0 +1,24 @@
+@import "../../scss/variables.scss";
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    margin-top: auto;
+    background-color: $light-pink;
+
+    .footer-row {
+        display: flex;
+        margin: 0 auto;
+        gap: 1.25rem;
+
+        .footer-social-media {
+            height: 3.75rem;
+            width: 3.75rem;
+            &:hover {
+                opacity: 0.2;
+                transition: all 0.4s;
+            }
+        }
+    }
+}
