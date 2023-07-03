@@ -7,13 +7,13 @@ import { Home } from "./features";
 export const App = () => {
   return (
     <div className="app">
-      <Header />
       <BrowserRouter>
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
-      <Footer />
     </div>
   );
 };

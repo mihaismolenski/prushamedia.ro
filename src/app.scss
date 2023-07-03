@@ -7,3 +7,16 @@
   background-color: $dark-grey;
   color: $white;
 }
+
+@font-face {
+  font-family: 'Allison';
+  src: local('Allison'),
+       url('./fonts/allison-script.regular.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Myriad';
+  src: local('Myriad'),
+       url('./fonts/Myriad-Pro-Regular.ttf') format('truetype');
+}
+
