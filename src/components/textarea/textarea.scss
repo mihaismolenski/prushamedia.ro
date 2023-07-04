@@ -1,0 +1,14 @@
+@import "../../scss/variables.scss";
+@import "../../scss/mixins.scss";
+
+.textarea {
+    textarea {
+        height: 6rem;
+        resize: none;
+        @include input-states();
+
+        &.error {
+            border: 1px solid $red;
+        }
+    }
+}

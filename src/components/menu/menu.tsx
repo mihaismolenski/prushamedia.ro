@@ -8,7 +8,7 @@ export const Menu = () => {
       <Link to="/">About</Link>
       <Link to="/portofolio">Portofolio</Link>
       <Link to="/stories">Stories</Link>
-      <Link to="/">Contact</Link>
+      <a href="#contact">Contact</a>
     </div>
   );
 };

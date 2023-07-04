@@ -1,0 +1,32 @@
+@import "../../scss/variables.scss";
+@import "../../scss/mixins.scss";
+
+.button {
+    height: 3rem;
+    font-size: $font-size-extra-large;
+    font-weight: $font-weight-regular;
+    border-radius: $border-radius;
+    box-sizing: border-box;
+    font-family: $font-myriad;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    white-space: nowrap;
+    background: $light-pink;
+    color: rgba($dark-grey, 0.7);
+    border: 1px solid $light-pink;
+    transition: all 0.25s ease-in-out;
+
+    &:hover:not([disabled]) {
+        background: rgba($light-pink, 0.7);
+        border: 1px solid rgba($light-pink, 0.7);
+        transition: all 0.25s ease-in-out;
+    }
+
+    &[disabled] {
+        opacity: 0.45;
+        cursor: default;
+    }
+}

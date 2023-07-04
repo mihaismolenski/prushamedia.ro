@@ -20,3 +20,9 @@
        url('./fonts/Myriad-Pro-Regular.ttf') format('truetype');
 }
 
+.error-message {
+  margin-top: 0.25rem;
+  height: 1rem;
+  color: $red;
+  font-size: $font-size-regular;
+}

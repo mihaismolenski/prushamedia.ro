@@ -6,12 +6,19 @@
     padding: 1rem;
     background: $background-white;
     width: 100%;
+    padding-bottom: 3rem;
 
     .contact-content {
         margin: 0 auto;
         max-width: 20rem;
-        min-width: 80%;
+        min-width: 60%;
         color: $dark-grey;
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
 
         .contact-content-title {
             font-family: Allison;
