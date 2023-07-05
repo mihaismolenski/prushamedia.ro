@@ -5,3 +5,4 @@ export * from "./menu/menu";
 export * from './input/input';
 export * from './textarea/textarea';
 export * from './button/button';
+export * from './carousel/carousel';
