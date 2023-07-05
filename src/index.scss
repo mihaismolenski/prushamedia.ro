@@ -1,3 +1,5 @@
+@import "./scss/variables.scss";
+
 html {
   scroll-behavior: smooth;
 }
@@ -7,6 +9,14 @@ body {
   font-family: Myriad;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background-size: auto;
+  background-attachment: scroll;
+  background-color: $dark-grey;
+  padding-bottom: 0px;
+  background-position: left top;
+  padding-top: 0px;
+  background-repeat: no-repeat;
 }
 
 code {
