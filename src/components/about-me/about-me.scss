@@ -1,0 +1,17 @@
+@import "../../scss/variables.scss";
+
+.about-me {
+  width: 100%;
+  background: $white;
+  box-sizing: border-box;
+  position: relative;
+  height: 20rem;
+  padding: 3rem 1rem;
+
+  .about-me-content {
+    margin: 0 auto;
+    max-width: 20rem;
+    min-width: 60%;
+    color: $dark-grey;
+  }
+}

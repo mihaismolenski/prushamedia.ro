@@ -4,6 +4,7 @@ import "./contact.scss";
 import Textarea from "../textarea/textarea";
 import Button from "../button/button";
 import { sendEmail } from "../../api/email.api";
+import {useState} from "react";
 
 export interface SendMessageFormData {
   name: "",
@@ -12,12 +13,13 @@ export interface SendMessageFormData {
   message: "",
 }
 
-export const Contact = () => {
+export const Contact = ({contactRef}: {contactRef: React.RefObject<HTMLDivElement>}) => {
+  const [isSending, setIsSending] = useState(false);
   const {
     handleSubmit,
     register,
     reset,
-    formState: { errors, isLoading },
+    formState: { errors },
   } = useForm<SendMessageFormData>({
     mode: "onBlur",
     defaultValues: {
@@ -29,6 +31,7 @@ export const Contact = () => {
   });
 
   const onSubmit = async (data: SendMessageFormData) => {
+    setIsSending(true);
     sendEmail(data)
     .then(() => {})
     .finally(() => {
@@ -38,11 +41,12 @@ export const Contact = () => {
         phone: "",
         message: "",
       });
+      setIsSending(false);
     });
   };
 
   return (
-    <div className="contact">
+    <div className="contact" ref={contactRef}>
       <div className="contact-content">
         <h2 className="contact-content-title" id="contact">
           Contact
@@ -82,7 +86,7 @@ export const Contact = () => {
             requiredMessage="Please fill in a message."
             errorMessage={errors.message?.message}
           />
-          <Button text={isLoading ? 'Sending' : 'Send Message'} type="submit" disabled={isLoading} />
+          <Button text={isSending ? 'Sending' : 'Send Message'} type="submit" disabled={isSending} />
         </form>
       </div>
     </div>

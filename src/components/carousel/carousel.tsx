@@ -2,7 +2,7 @@ import React, {useState, useEffect, ReactElement} from "react";
 
 import "./carousel.scss";
 
-//https://codesandbox.io/s/carousel-fade-effect-wl29r?file=/src/App.js
+//https://codesandbox.io/s/carousel-fade-effect-wl29r
 export const Carousel = ({children}: { children: ReactElement[] }) => {
     const [counter, setCounter] = useState(1);
     const content = children;
