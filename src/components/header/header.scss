@@ -9,4 +9,12 @@
     background-color: $white;
     position: relative;
     z-index: 1;
+
+    .header-logo {
+        color: $dark-grey;
+        font-family: $font-allison;
+        font-size: 5rem;
+        display: flex;
+        align-items: center;
+    }
 }

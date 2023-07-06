@@ -7,3 +7,4 @@ export * from "./textarea/textarea";
 export * from "./button/button";
 export * from "./carousel/carousel";
 export * from "./about-me/about-me";
+export * from "./story-card/story-card";

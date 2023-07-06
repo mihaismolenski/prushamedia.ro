@@ -1,5 +1,15 @@
 @import "../../scss/variables.scss";
 
 .stories {
+  width: 100%;
+  padding: 3rem 1rem;
 
+  .stories-content {
+    max-width: 80rem;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: center;
+    gap: 3rem;
+    margin: 0 auto;
+  }
 }

@@ -59,6 +59,11 @@
       background-color: $grey;
       display: inline-flex;
       transition: background-color 0.6s ease;
+
+      &.active {
+        background: $white;
+        transition: background-color 0.6s ease;
+      }
     }
   }
 }

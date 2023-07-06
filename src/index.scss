@@ -6,16 +6,15 @@ html {
 
 body {
   margin: 0;
-  font-family: Myriad;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
   background-size: auto;
   background-attachment: scroll;
-  background-color: $dark-grey;
-  padding-bottom: 0px;
+  //background-color: $dark-grey;
+  padding-bottom: 0;
   background-position: left top;
-  padding-top: 0px;
+  padding-top: 0;
   background-repeat: no-repeat;
 }
 

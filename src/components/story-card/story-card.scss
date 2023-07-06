@@ -1,0 +1,28 @@
+@import "../../scss/variables.scss";
+
+.story-card {
+  cursor: pointer;
+
+  .story-card-title {
+    color: $dark-grey;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 0.5rem;
+    font-weight: $font-weight-semibold;
+    font-size: $font-size-xl;
+
+    &:hover {
+      color: rgba($dark-grey, 0.8);
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  img {
+    width: 100%;
+
+    &:hover {
+      box-shadow: 0 3px 14px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}
