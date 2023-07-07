@@ -56,6 +56,12 @@ export const Gallery = ({
           {!autoplay && (
             <div className="gallery-button gallery-next" onClick={goNext}></div>
           )}
+          <img
+            className="gallery-exit-full-screen"
+            src="/images/exit-fullscreen.png"
+            alt="exit-fullscreen"
+            onClick={() => handleClose()}
+          />
         </div>
       </div>
     </>
