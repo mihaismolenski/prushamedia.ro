@@ -2,6 +2,7 @@
 
 .story-card {
   cursor: pointer;
+  text-decoration: none;
 
   .story-card-title {
     color: $dark-grey;
@@ -10,6 +11,7 @@
     margin-top: 0.5rem;
     font-weight: $font-weight-semibold;
     font-size: $font-size-xl;
+
 
     &:hover {
       color: rgba($dark-grey, 0.8);

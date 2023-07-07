@@ -10,13 +10,13 @@ export const Footer = () => {
           href="https://www.facebook.com/profile.php?id=100090807386681"
           className="footer-social-media"
         >
-          <img src="images/facebook.png" alt="facebook" width="40px" />
+          <img src="/images/facebook.png" alt="facebook" width="40px" />
         </a>
         <a
           href="https://www.instagram.com/prushamedia/"
           className="footer-social-media"
         >
-          <img src="images/instagram.png" alt="instagram" width="40px" />
+          <img src="/images/instagram.png" alt="instagram" width="40px" />
         </a>
       </div>
 

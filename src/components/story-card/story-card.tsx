@@ -1,16 +1,18 @@
 import "./story-card.scss";
+import { Link } from "react-router-dom";
 
 export interface StoryCardProps {
+  storyId: string;
   title: string;
   coverImg: string;
 }
 
-export const StoryCard = ({ title, coverImg }: StoryCardProps) => {
+export const StoryCard = ({ storyId, title, coverImg }: StoryCardProps) => {
   return (
-    <div className="story-card">
+    <Link className="story-card" to={`/stories/${storyId}`}>
       <img alt="cover" src={coverImg} />
       <div className="story-card-title">{title}</div>
-    </div>
+    </Link>
   );
 };
 

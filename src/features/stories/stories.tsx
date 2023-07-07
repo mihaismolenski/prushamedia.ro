@@ -1,29 +1,48 @@
 import "./stories.scss";
 import { StoryCard } from "../../components";
-import story1Img from "../../gallery/stories/story1.jpeg";
-import story2Img from "../../gallery/stories/story2.jpeg";
-import story3Img from "../../gallery/stories/story3.jpeg";
-import story4Img from "../../gallery/stories/story4.jpeg";
+import { STORIES_DATA } from "./stories-data";
+import { useLocation, useParams } from "react-router-dom";
+import StoryDetails from "./story-details/story-details";
+import { useMemo } from "react";
 
 export const Stories = () => {
+  const { pathname } = useLocation();
+  const { storyId } = useParams();
+  const selectedStory = useMemo(() => {
+    return STORIES_DATA.find((s) => s.id === storyId);
+  }, [storyId]);
+  const neighbours = useMemo(() => {
+    const idx = STORIES_DATA.findIndex((s) => s.id === storyId);
+
+    if (idx === 0) return [STORIES_DATA.length - 1, 1];
+    if (idx === STORIES_DATA.length - 1) return [STORIES_DATA.length - 2, 0];
+
+    return [idx - 1, idx + 1];
+  }, [storyId]);
+
   return (
     <div className="stories">
-      <div className="stories-content ">
-        <StoryCard title="Iustina - the Bride" coverImg={story1Img} />
-        <StoryCard title="Another Story - Sunset" coverImg={story2Img} />
-        <StoryCard title="Yet Another Story - Poppies" coverImg={story3Img} />
-        <StoryCard
-          title="Motherly Love - the Connection"
-          coverImg={story4Img}
+      {pathname === "/stories" && (
+        <div className="stories-content ">
+          {STORIES_DATA.map((story, index) => (
+            <StoryCard
+              storyId={story.id}
+              title={story.title}
+              coverImg={story.images[0]}
+              key={index}
+            />
+          ))}
+        </div>
+      )}
+      {storyId && (
+        <StoryDetails
+          data={selectedStory!}
+          neighbours={[
+            STORIES_DATA[neighbours[0]],
+            STORIES_DATA[neighbours[1]],
+          ]}
         />
-        <StoryCard title="Iustina - the Bride" coverImg={story1Img} />
-        <StoryCard title="Another Story - Sunset" coverImg={story2Img} />
-        <StoryCard title="Yet Another Story - Poppies" coverImg={story3Img} />
-        <StoryCard
-          title="Motherly Love - the Connection"
-          coverImg={story4Img}
-        />
-      </div>
+      )}
     </div>
   );
 };

@@ -10,68 +10,68 @@ export const Portofolio = () => {
       <div className="portofolio-content">
         <div className="column">
           <div>
-            <img alt="portofolio-image" src={story1Img} />
+            <img alt="portofolio" src={story1Img} />
           </div>
           <div>
-            <img alt="portofolio-image" src={story2Img} />
+            <img alt="portofolio" src={story2Img} />
           </div>
           <div>
-            <img alt="portofolio-image" src={story3Img} />
-          </div>
-        </div>
-        <div className="column">
-          <div>
-            <img alt="portofolio-image" src={story2Img} />
-          </div>
-          <div>
-            <img alt="portofolio-image" src={story3Img} />
-          </div>
-          <div>
-            <img alt="portofolio-image" src={story4Img} />
+            <img alt="portofolio" src={story3Img} />
           </div>
         </div>
         <div className="column">
           <div>
-            <img alt="portofolio-image" src={story3Img} />
+            <img alt="portofolio" src={story2Img} />
           </div>
           <div>
-            <img alt="portofolio-image" src={story4Img} />
+            <img alt="portofolio" src={story3Img} />
           </div>
           <div>
-            <img alt="portofolio-image" src={story1Img} />
-          </div>
-        </div>
-        <div className="column">
-          <div>
-            <img alt="portofolio-image" src={story1Img} />
-          </div>
-          <div>
-            <img alt="portofolio-image" src={story3Img} />
-          </div>
-          <div>
-            <img alt="portofolio-image" src={story4Img} />
+            <img alt="portofolio" src={story4Img} />
           </div>
         </div>
         <div className="column">
           <div>
-            <img alt="portofolio-image" src={story1Img} />
+            <img alt="portofolio" src={story3Img} />
           </div>
           <div>
-            <img alt="portofolio-image" src={story2Img} />
+            <img alt="portofolio" src={story4Img} />
           </div>
           <div>
-            <img alt="portofolio-image" src={story3Img} />
+            <img alt="portofolio" src={story1Img} />
           </div>
         </div>
         <div className="column">
           <div>
-            <img alt="portofolio-image" src={story1Img} />
+            <img alt="portofolio" src={story1Img} />
           </div>
           <div>
-            <img alt="portofolio-image" src={story2Img} />
+            <img alt="portofolio" src={story3Img} />
           </div>
           <div>
-            <img alt="portofolio-image" src={story3Img} />
+            <img alt="portofolio" src={story4Img} />
+          </div>
+        </div>
+        <div className="column">
+          <div>
+            <img alt="portofolio" src={story1Img} />
+          </div>
+          <div>
+            <img alt="portofolio" src={story2Img} />
+          </div>
+          <div>
+            <img alt="portofolio" src={story3Img} />
+          </div>
+        </div>
+        <div className="column">
+          <div>
+            <img alt="portofolio" src={story1Img} />
+          </div>
+          <div>
+            <img alt="portofolio" src={story2Img} />
+          </div>
+          <div>
+            <img alt="portofolio" src={story3Img} />
           </div>
         </div>
       </div>
