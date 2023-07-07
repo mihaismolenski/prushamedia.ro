@@ -16,13 +16,13 @@
         font-size: 5rem;
         display: flex;
         align-items: center;
+        gap: 4rem;
     }
 
     .header-mobile-icon {
         position: absolute;
-        left: 16px;
-        top: 16px;
-        //width: 36px;
+        left: 1rem;
+        top: 1rem;
         cursor: pointer;
         display: none;
     }
@@ -31,9 +31,13 @@
 // Mobile design
 @media only screen and (max-width: $screen-tablet) {
     .header {
+        padding: 0.5rem 1rem;
+
         .header-logo {
+            gap: 1rem;
+
             img {
-                height: 3.5rem;
+                height: 4rem;
             }
 
             font-size: 1.75rem;
