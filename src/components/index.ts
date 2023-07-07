@@ -9,3 +9,4 @@ export * from "./carousel/carousel";
 export * from "./about-me/about-me";
 export * from "./story-card/story-card";
 export * from "./scroll-to-top/scroll-to-top";
+export * from "./gallery/gallery";
