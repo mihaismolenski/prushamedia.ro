@@ -1,16 +1,18 @@
 import "./gallery.scss";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export interface GalleryProps {
   handleClose: Function;
   images: string[];
   selectedPhoto: number;
+  autoplay: boolean;
 }
 
 export const Gallery = ({
   handleClose,
   images,
   selectedPhoto,
+  autoplay,
 }: GalleryProps) => {
   const [currentPhoto, setCurrentPhoto] = useState(selectedPhoto);
 
@@ -22,6 +24,15 @@ export const Gallery = ({
     setCurrentPhoto((currentPhoto + 1) % images.length);
   };
 
+  useEffect(() => {
+    if (!autoplay) return;
+
+    let interval = setInterval(() => {
+      goNext();
+    }, 3000);
+    return () => clearInterval(interval);
+  });
+
   return (
     <>
       <div
@@ -30,7 +41,9 @@ export const Gallery = ({
       ></div>
       <div className="gallery-wrapper">
         <div className="gallery-content">
-          <div className="gallery-button gallery-back" onClick={goPrev}></div>
+          {!autoplay && (
+            <div className="gallery-button gallery-back" onClick={goPrev}></div>
+          )}
           {images.map((img, index) => (
             <img
               key={index}
@@ -40,7 +53,9 @@ export const Gallery = ({
             />
           ))}
 
-          <div className="gallery-button gallery-next" onClick={goNext}></div>
+          {!autoplay && (
+            <div className="gallery-button gallery-next" onClick={goNext}></div>
+          )}
         </div>
       </div>
     </>

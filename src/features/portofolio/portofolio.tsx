@@ -111,6 +111,7 @@ export const Portofolio = () => {
           handleClose={() => setShowGallery(false)}
           images={photos}
           selectedPhoto={selectedPhoto}
+          autoplay={false}
         />
       )}
     </div>
