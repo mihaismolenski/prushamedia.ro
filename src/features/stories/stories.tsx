@@ -8,9 +8,11 @@ import { useMemo } from "react";
 export const Stories = () => {
   const { pathname } = useLocation();
   const { storyId } = useParams();
+
   const selectedStory = useMemo(() => {
     return STORIES_DATA.find((s) => s.id === storyId);
   }, [storyId]);
+
   const neighbours = useMemo(() => {
     const idx = STORIES_DATA.findIndex((s) => s.id === storyId);
 
@@ -36,10 +38,10 @@ export const Stories = () => {
       )}
       {storyId && (
         <StoryDetails
-          data={selectedStory!}
+          data={selectedStory || STORIES_DATA[1]}
           neighbours={[
-            STORIES_DATA[neighbours[0]],
-            STORIES_DATA[neighbours[1]],
+            STORIES_DATA[neighbours[0]] || STORIES_DATA[0],
+            STORIES_DATA[neighbours[1]] || STORIES_DATA[2],
           ]}
         />
       )}
