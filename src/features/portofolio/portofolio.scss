@@ -10,7 +10,7 @@
     flex-direction: column;
     gap: 1.5rem;
 
-    @media only screen and (min-width: $screen-desktop) {
+    @media only screen and (min-width: $screen-mobile) {
       flex-direction: row;
     }
 
@@ -33,6 +33,19 @@
             transition: all 0.3s ease-in-out;
           }
         }
+      }
+    }
+  }
+}
+
+// Mobile design
+@media only screen and (max-width: $screen-tablet) {
+  .portofolio {
+    padding: 1rem;
+
+    .portofolio-content {
+      .column {
+        gap: 0.5rem;
       }
     }
   }

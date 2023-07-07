@@ -1,0 +1,56 @@
+@import "../../scss/variables.scss";
+
+.sidemenu-background {
+  width: auto;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 99;
+
+  &.visible {
+    visibility: visible;
+  }
+
+  &.hidden {
+    visibility: hidden;
+  }
+}
+
+.sidemenu {
+  padding: 80px 20px 20px 20px;
+  position: fixed;
+  top: 0;
+  left: -70vw;
+  width: 70vw;
+  max-width: 400px;
+  background-color: $light-pink;
+  height: 100vh;
+  z-index: 100;
+  transition: 0.5s all ease-in-out;
+  box-sizing: border-box;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: $font-size-extra-large;
+    font-weight: $font-weight-regular;
+    color: $dark-grey;
+
+    &:hover {
+      color: rgba($dark-grey, 0.5);
+      transition: all 0.3s;
+    }
+  }
+
+  &.active {
+    left: 0 !important;
+    box-shadow: 0 0 10px $white;
+  }
+}

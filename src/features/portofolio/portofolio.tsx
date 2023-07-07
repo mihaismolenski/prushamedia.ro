@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 import "./portofolio.scss";
 import story1Img from "../../gallery/stories/story1.jpeg";
@@ -9,7 +9,7 @@ import { Gallery } from "../../components";
 
 export const Portofolio = () => {
   const [showGallery, setShowGallery] = useState(false);
-  const [noColumns] = useState(6);
+  const [noColumns, setNoColumns] = useState(6);
   const [selectedPhoto, setSelectedPhoto] = useState(0);
 
   useEffect(() => {
@@ -21,6 +21,30 @@ export const Portofolio = () => {
         : "0.25rem solid #0f0f0f";
     }
   }, [showGallery]);
+
+  const resizeListener = useCallback(() => {
+    const width = window.innerWidth;
+    if (width > 1500) {
+      setNoColumns(6);
+    }
+    if (width > 1200 && width <= 1500) {
+      setNoColumns(4);
+    }
+    if (width > 900 && width <= 1200) {
+      setNoColumns(3);
+    }
+    if (width > 600 && width <= 900) {
+      setNoColumns(2);
+    }
+  }, [setNoColumns]);
+
+  useEffect(() => {
+    window.addEventListener("resize", resizeListener);
+
+    return () => {
+      window.removeEventListener("resize", resizeListener);
+    };
+  }, [resizeListener]);
 
   const photos: string[] = [
     story1Img,

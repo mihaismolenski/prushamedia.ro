@@ -33,3 +33,22 @@
     }
   }
 }
+
+// Tablet design
+@media only screen and (max-width: $screen-tablet) {
+  .story-details {
+    h2 {
+      font-size: $font-size-large;
+    }
+
+    .story-details-gallery {
+      width: 100%;
+
+      .story-details-navigation {
+        a {
+          font-size: 0.625rem;
+        }
+      }
+    }
+  }
+}

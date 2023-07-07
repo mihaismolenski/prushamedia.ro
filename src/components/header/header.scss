@@ -17,4 +17,31 @@
         display: flex;
         align-items: center;
     }
+
+    .header-mobile-icon {
+        position: absolute;
+        left: 16px;
+        top: 16px;
+        //width: 36px;
+        cursor: pointer;
+        display: none;
+    }
+}
+
+// Mobile design
+@media only screen and (max-width: $screen-tablet) {
+    .header {
+        .header-logo {
+            img {
+                height: 3.5rem;
+            }
+
+            font-size: 1.75rem;
+        }
+
+        .header-mobile-icon {
+            display: block;
+            z-index: 101;
+        }
+    }
 }

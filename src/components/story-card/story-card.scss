@@ -28,3 +28,12 @@
     }
   }
 }
+
+// Tablet design
+@media only screen and (max-width: $screen-tablet) {
+  .story-card {
+   .story-card-title {
+     font-size: $font-size-large;
+   }
+  }
+}

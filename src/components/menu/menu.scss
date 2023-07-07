@@ -18,3 +18,10 @@
         }
     }
 }
+
+// Tablet design
+@media only screen and (max-width: $screen-tablet) {
+    .menu {
+       display: none;
+    }
+}

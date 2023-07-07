@@ -29,3 +29,14 @@
         }
     }
 }
+
+// Mobile design
+@media only screen and (max-width: $screen-mobile) {
+    .contact {
+        .contact-content {
+            margin: unset;
+            width: 100%;
+            max-width: unset;
+        }
+    }
+}
