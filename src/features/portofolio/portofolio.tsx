@@ -9,7 +9,7 @@ import { Gallery } from "../../components";
 
 export const Portofolio = () => {
   const [showGallery, setShowGallery] = useState(false);
-  const [noColumns, setNoColumns] = useState(6);
+  const [noColumns, setNoColumns] = useState(5);
   const [selectedPhoto, setSelectedPhoto] = useState(0);
 
   useEffect(() => {
@@ -25,7 +25,7 @@ export const Portofolio = () => {
   const resizeListener = useCallback(() => {
     const width = window.innerWidth;
     if (width > 1500) {
-      setNoColumns(6);
+      setNoColumns(5);
     }
     if (width > 1200 && width <= 1500) {
       setNoColumns(4);

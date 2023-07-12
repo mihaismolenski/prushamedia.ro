@@ -7,8 +7,12 @@
     justify-content: space-between;
     padding-top: 1.5rem;
     margin-top: auto;
-    background-color: $light-pink;
+    background-color: $orange;
     position: relative;
+
+    .menu > a {
+        color: $white;
+    }
 
     .footer-row {
         display: flex;
