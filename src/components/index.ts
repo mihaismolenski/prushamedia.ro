@@ -11,3 +11,4 @@ export * from "./story-card/story-card";
 export * from "./scroll-to-top/scroll-to-top";
 export * from "./gallery/gallery";
 export * from "./sidemenu/sidemenu";
+export * from "./go-to-top/go-to-top";
