@@ -17,7 +17,7 @@ export const Header = () => {
       />
       <div className="header-logo">
         <div>Ioana</div>
-        <img src="/images/logo2.png" alt="logo" height="180px" />
+        <img src="images/logo2.png" alt="logo" height="180px" />
         <div>Pruşu</div>
       </div>
       <Menu />
