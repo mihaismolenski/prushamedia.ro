@@ -5,7 +5,7 @@ import story1Img from "../../gallery/stories/story1.jpeg";
 import story2Img from "../../gallery/stories/story2.jpeg";
 import story3Img from "../../gallery/stories/story3.jpeg";
 import story4Img from "../../gallery/stories/story4.jpeg";
-import { Gallery } from "../../components";
+import { Gallery, GoToTop } from "../../components";
 
 export const Portofolio = () => {
   const [showGallery, setShowGallery] = useState(false);
@@ -114,6 +114,7 @@ export const Portofolio = () => {
           autoplay={false}
         />
       )}
+      <GoToTop />
     </div>
   );
 };

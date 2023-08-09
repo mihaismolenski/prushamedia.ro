@@ -1,5 +1,5 @@
 import "./stories.scss";
-import { StoryCard } from "../../components";
+import { GoToTop, StoryCard } from "../../components";
 import { STORIES_DATA } from "./stories-data";
 import { useLocation, useParams } from "react-router-dom";
 import StoryDetails from "./story-details/story-details";
@@ -45,6 +45,7 @@ export const Stories = () => {
           ]}
         />
       )}
+      <GoToTop />
     </div>
   );
 };

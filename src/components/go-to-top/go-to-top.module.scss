@@ -1,0 +1,22 @@
+@import "../../scss/variables.scss";
+
+.go-to-top {
+  margin: 1.5rem auto 0 auto;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: $font-size-xl;
+  color: $dark-grey;
+  text-align: center;
+
+  &:hover {
+    color: $light-pink;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+// Tablet design
+@media only screen and (max-width: $screen-tablet) {
+  .go-to-top {
+    font-size: $font-size-regular;
+  }
+}
